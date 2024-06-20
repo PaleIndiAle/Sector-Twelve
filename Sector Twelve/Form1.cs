@@ -21,8 +21,8 @@ namespace Sector_Twelve
         int x, y;
         int a;
 
-        SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.HELL);
-        SoundPlayer soundPlayer2 = new SoundPlayer(Properties.Resources.TaDa);
+        //SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.HELL);
+        //SoundPlayer soundPlayer2 = new SoundPlayer(Properties.Resources.TaDa);
 
         Rectangle background = new Rectangle(0, 0, 800, 800);
 
@@ -64,6 +64,7 @@ namespace Sector_Twelve
             titleLabel.Text = "";
             subtitleLabel.Text = "";
 
+            //Planned Time Limit & Zombie Kill system
             //time = 500;
             //score = 0;
 
@@ -92,6 +93,7 @@ namespace Sector_Twelve
             Rectangle yellThree = new Rectangle(Ralph.X, Ralph.Y - 40, 40, 40);
             Rectangle yellFour = new Rectangle(Ralph.X, Ralph.Y + 40, 40, 40);
 
+            // Checking where mouse was
             //label1.Text = $"{x}, {y}";
 
             int yOne = Ralph.Y + 40;
@@ -105,22 +107,15 @@ namespace Sector_Twelve
             }
             else if (m == 2)
             {
-                soundPlayer2.Play();
-                titleLabel.ForeColor = Color.Black;
-                subtitleLabel.ForeColor = Color.Black;
                 subtitleLabel.Visible = true;
                 titleLabel.Visible = true;
-                titleLabel.ForeColor = Color.Black;
                 subtitleLabel.Text = "Thank you for playing\nPress Space to Exit";
                 titleLabel.Text = "You Escaped! Victory!";
             }
             else if (m == 3)
             {
-                soundPlayer.Play();
                 titleLabel.Visible = true;
                 subtitleLabel.Visible = true;
-                titleLabel.ForeColor = Color.Black;
-                subtitleLabel.ForeColor = Color.Black;
                 titleLabel.Text = "Zombies ate you!";
                 subtitleLabel.Text = "Game Over...\nPress Space to Exit";
             }
